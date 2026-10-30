@@ -248,3 +248,153 @@ def what_is_the_world():
     print(f"Times run: {times_run}")
     the_last_thing = "I am the last thing"
     # return the_last_thing <<< this is the only real way to get a local variable out of a fn
+
+
+# CONDITIONALS ############################################################################
+
+# if this:
+#     whatever
+# else:
+#     do something else
+
+# Comparison Operators
+
+10 > 9 # True
+
+len("hello") >= 5 # True
+
+current_count = 0
+
+# two equals means we are checking the value NOT setting it
+current_count == 10 # False
+
+current_count = 10
+
+current_count == 10 # True
+
+# you can also check that something is NOT equal
+current_count != 10 # False
+
+# you can make sure two (or more) conditions are true with an `and`
+current_count > 9 and type( current_count ) == int # True
+current_count > 9 and type( current_count ) == float # False
+
+# you can see if either of two (or more) conditions are true with an `or`
+current_count > 9 or current_count < -9 # True
+
+def double_digits(number):
+    if ((number > 9 and number < 100) or (number < -9 and number > -100)):
+        return "Double digits"
+    else:
+        return "Not double digits"
+
+# you don't need to have an `else` with every `if`
+def just_if(password):
+    if (password == "password123"):
+        return "Password accepted"
+
+# from datetime import datetime
+
+# current_time = None
+
+# current_time = datetime.now()
+
+current_time = 14
+
+# elif allows us to check multiple conditions in sequence
+# if the previous condition is False it moves on to the next one
+# however if a condition is True, it ignores all the later conditions
+def get_time_based_greeting(current_time):
+    if (current_time < 12):
+        return "Good morning"
+    elif (current_time < 18):
+        return "Good afternoon"
+    elif (current_time < 22):
+        return "Good evening"
+    else:
+        return "Good night"
+
+
+# TRUTHY / FALSEY VALUES
+
+# every value in Python has an inherent truthiness or falsiness to it
+
+# falsey values tend to be non-existent or empty values
+
+# you can test truthy or falsey with the `bool()` constructor which turns it into True or False
+
+bool( 1 ) # True
+bool( 0 ) # False
+bool( -1 ) # True
+
+bool( "Hello" ) # True
+bool( "" ) # False
+bool( "     " ) # True
+
+bool( None ) # False
+
+bool( ["I am a list"] ) # True (the list has something inside of it)
+bool( [] ) # False (the list is empty)
+
+def is_not_zero(number):
+    # we can use truthiness to check if something is not zero
+    if (number):
+        return "It's not zero"
+
+def authorize(password):
+    # we can use truthiness to check if a string has length (if it exists basically)
+    if (password):
+        if (password == "password123"):
+            return "Correct password"
+        else:
+            return "Incorrect password"
+    else:
+        return "Please type in a password, you did not type anything in"
+
+
+# EXERCISES ##################################################################################
+
+# 1. Build the function `say_my_name()` which accepts a `first_name` and a `last_name`
+#   The function returns the name as a single full name
+#   Example: say_my_name("Chett", "Tiller") --> "Chett Tiller"
+
+def say_my_name(first_name, last_name):
+    pass
+
+# 2. Build the function `is_a_string()` which accepts a single argument `arg`
+#   The function returns either "STRING" if `arg` is of type `str` or else "NOT STRING"
+# Example: is_a_string("hello") --> "STRING"
+# Example: is_a_string(07734) --> "NOT STRING"
+
+def is_a_string(arg):
+    pass
+
+# 3. Build the function `stoplight()` which accepts a single argument `color`
+#   The function returns "GO" if `color` is "green", "SLOW" for "yellow" and "STOP" for "red"
+#   If `color` is none of those three, return "OH NO"
+# Example: stoplight("green") --> "GO"
+# Example: stoplight("red") --> "STOP"
+# Example: stoplight("aquamarine") --> "OH NO"
+
+def stoplight(color):
+    pass
+
+# 4. Build the function `fizz_buzz()` which accepts a single argument `number`
+#   The function returns "fizz" if `number` is divisible by 3, "buzz" if divisible by 5
+#   Return "fizzbuzz" if divisible by both and just the number if divisible by neither
+# Example: fizz_buzz(6) --> "fizz"
+# Example: fizz_buzz(10) --> "buzz"
+# Example: fizz_buzz(30) --> "fizzbuzz"
+# Example: fizz_buzz(31) --> 31
+
+def fizz_buzz(number):
+    pass
+
+# 5. Build the function `average()` which accepts two arguments `num1` and `num2`
+#   The function return the average of the two numbers
+#   Average is calculated as the sum divided by the total number of numbers
+# Example: average(10, 20) --> 15
+# Example: average(-10, 10) --> 0
+
+def average(num1, num2):
+    pass
