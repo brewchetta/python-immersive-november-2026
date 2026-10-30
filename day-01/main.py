@@ -71,6 +71,7 @@ general_greeting = "Hello"
 time_of_day = "morning"
 formatted_string = f"{general_greeting}! It is now {time_of_day}"
 # 'Hello! It is now morning'
+# f strings only work with "" double quotes
 
 # concatenation
 "string one" + " " + "string two"
@@ -125,3 +126,125 @@ lightswitch = True      # the light is on
 lightswitch = False     # the light is off
 
 # make sure you're using capital "T" True and not lower "t" true
+
+
+# FUNCTIONS #########################################################
+
+# a callable set of instructions which do something
+
+# function definition
+def make_sandwich():
+    # everything in the indent is part of the fn code
+    print("1. Gather ingredients")
+    print("2. Lay out two slices of bread")
+    print("3. Add sauce to bread")
+    print("4. Add other ingredients to bread")
+    print("5. Close bread together")
+    print("6. Eat sandwich")
+
+# if it's not in the indent we have left the fn
+
+# call/trigger/activate/invoke the fn
+make_sandwich()
+
+# you can repeat a fn call as many times as you need which makes them powerful
+make_sandwich()
+
+# fns can take INPUT and generate OUTPUT
+
+# INPUT
+def greet_user(username, time):
+    print( f"Hello {username}! It is currently {time}" )
+
+# by using arguments (the special name for input) we can make fns MORE FLEXIBLE
+# parameters are the placeholder variables before we call the fn with concrete args
+
+greet_user("Chett", "12pm")
+
+# you may use variables for your arguments
+user_1 = "Chett Tiller"
+current_time = "12am"
+greet_user(user_1, current_time)
+
+# you can use keyword arguments to change how the args get put in
+greet_user( time=current_time, username=user_1 )
+# this has the same output as the fn call above still!
+
+
+# default argument
+def with_default(name, age=21):
+    return f"{name} is {age}"
+
+with_default("Chett") # "Chett is 21"
+# it uses the default because we didn't give it an age
+
+with_default("Chett", 19) # "Chett is 19"
+# the age we put in (19) overrides the default age
+
+def authenticate(username, password, role="user"):
+    pass # fns need something in them and `pass` stands for "something will go here later"
+
+
+# OUTPUT
+
+def addition(num_1, num_2):
+    return num_1 + num_2
+
+
+def return_early():
+    return "I am the return"
+    print("I come after the return")
+
+def multiple_returns():
+    return 1 # only the first evaluated return happens ALL THE REST GET IGNORED
+    return 2
+    return 3
+    return 4
+
+
+
+# IMPORTANT: each fn should only have one responsibility!
+
+def system_check():
+    print("All systems are go!")
+
+# this fn uses other fns and calls them in the order that we need to
+def bootup():
+    greet_user(user_1, current_time)
+    system_check()
+
+
+# you can create fns in fns
+def outer_fn():
+
+    def inner_fn():
+        print("I am the inner fn")
+
+    inner_fn()
+
+outer_fn()
+
+# you can pass fns as arguments to other fns
+def call_three_times( callback_fn ):
+    callback_fn()
+    callback_fn()
+    callback_fn()
+
+
+# SCOPE
+
+# this is the global scope and everything here is available in all other scopes
+the_world = "I am the world"
+times_run = 0
+
+# everything tabbed in for the fn is inside of the fn
+def what_is_the_world():
+    global times_run
+    # pulls times_run from the global scope
+    # local scope
+    print( the_world )
+    # increment by one
+    times_run += 1
+    print(f"Times run: {times_run}")
+    the_last_thing = "I am the last thing"
+    # return the_last_thing <<< this is the only real way to get a local variable out of a fn
