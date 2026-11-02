@@ -1,4 +1,181 @@
 # -----------------------------------------------------------------------------
+# Exercise 1: First Item
+# Concepts: lists (indexing)
+#
+# Write a function `first_item` that returns the first item in a list.
+#
+# Arguments:
+#   - items (list[str]): a list containing at least one string
+#
+# Returns: str, the first item in the list.
+#
+# Examples:
+#   - Input: ["red", "green", "blue"]  ->  Output: "red"
+#   - Input: ["dog"]                   ->  Output: "dog"
+
+
+# -----------------------------------------------------------------------------
+# Exercise 2: Add to the List
+# Concepts: lists (adding items)
+#
+# Write a function `add_item` that adds a new item to the end of a list and
+# returns the updated list.
+#
+# Arguments:
+#   - items (list[str]): a list of strings
+#   - new_item (str): the string to add to the end of the list
+#
+# Returns: list[str], the list with the new item added at the end.
+#
+# Examples:
+#   - Input: ["apple", "banana"], "cherry"  ->  Output: ["apple", "banana", "cherry"]
+#   - Input: [], "milk"                     ->  Output: ["milk"]
+
+
+# -----------------------------------------------------------------------------
+# Exercise 3: Look Up an Age
+# Concepts: dictionaries (looking up a value by key)
+#
+# Write a function `get_age` that returns the age stored for a given name in
+# a dictionary. You may assume the name is always in the dictionary.
+#
+# Arguments:
+#   - ages (dict[str, int]): maps people's names to their ages
+#   - name (str): the name to look up
+#
+# Returns: int, the age belonging to that name.
+#
+# Examples:
+#   - Input: {"Sam": 12, "Priya": 14}, "Priya"  ->  Output: 14
+#   - Input: {"Leo": 9}, "Leo"                  ->  Output: 9
+
+
+# -----------------------------------------------------------------------------
+# Exercise 4: Add a Pet
+# Concepts: dictionaries (adding a key and value)
+#
+# Write a function `add_pet` that adds a new person and their pet to a
+# dictionary and returns the updated dictionary.
+#
+# Arguments:
+#   - pets (dict[str, str]): maps owners' names to the type of pet they own
+#   - owner (str): the name of the new owner
+#   - animal (str): the type of pet the new owner has
+#
+# Returns: dict[str, str], the dictionary with the new owner and pet added.
+#
+# Examples:
+#   - Input: {"Ana": "cat"}, "Ben", "dog"  ->  Output: {"Ana": "cat", "Ben": "dog"}
+#   - Input: {}, "Cy", "fish"              ->  Output: {"Cy": "fish"}
+
+
+# -----------------------------------------------------------------------------
+# Exercise 5: Add Up the Numbers
+# Concepts: for loops, lists
+#
+# Write a function `total` that uses a for loop to add up every number in a
+# list.
+#
+# Arguments:
+#   - numbers (list[int]): a list of integers
+#
+# Returns: int, the sum of all the numbers (0 if the list is empty).
+#
+# Examples:
+#   - Input: [1, 2, 3, 4]  ->  Output: 10
+#   - Input: []            ->  Output: 0
+
+
+# -----------------------------------------------------------------------------
+# Exercise 6: Double Each Number
+# Concepts: for loops, lists
+#
+# Write a function `double_all` that uses a for loop to build a new list where
+# every number from the original list has been multiplied by 2.
+#
+# Arguments:
+#   - numbers (list[int]): a list of integers
+#
+# Returns: list[int], a new list with each number doubled.
+#
+# Examples:
+#   - Input: [1, 2, 3]  ->  Output: [2, 4, 6]
+#   - Input: [5]        ->  Output: [10]
+
+
+# -----------------------------------------------------------------------------
+# Exercise 7: Countdown
+# Concepts: while loops, lists
+#
+# Write a function `countdown` that uses a while loop to build a list that
+# counts down from a starting number to 1.
+#
+# Arguments:
+#   - start (int): a positive integer to start counting down from
+#
+# Returns: list[int], the numbers from start down to 1.
+#
+# Examples:
+#   - Input: 3  ->  Output: [3, 2, 1]
+#   - Input: 1  ->  Output: [1]
+
+
+# -----------------------------------------------------------------------------
+# Exercise 8: Positive, Negative, or Zero
+# Concepts: conditional logic (if / elif / else)
+#
+# Write a function `describe_number` that decides whether a number is
+# positive, negative, or zero.
+#
+# Arguments:
+#   - number (int): any integer
+#
+# Returns: str, either "positive", "negative", or "zero".
+#
+# Examples:
+#   - Input: 8   ->  Output: "positive"
+#   - Input: -3  ->  Output: "negative"
+
+
+# -----------------------------------------------------------------------------
+# Exercise 9: Add Two Numbers from Text
+# Concepts: data types (converting a string to an integer)
+#
+# Write a function `add_text_numbers` that takes two numbers written as strings,
+# converts them to integers, and returns their sum.
+#
+# Arguments:
+#   - first (str): a whole number written as text, such as "5"
+#   - second (str): a whole number written as text, such as "7"
+#
+# Returns: int, the sum of the two numbers.
+#
+# Examples:
+#   - Input: "5", "7"    ->  Output: 12
+#   - Input: "10", "20"  ->  Output: 30
+
+
+# -----------------------------------------------------------------------------
+# Exercise 10: Count the Big Numbers
+# Concepts: for loops, lists, conditional logic
+#
+# Write a function `count_big` that uses a for loop to count how many numbers
+# in a list are greater than 10.
+#
+# Arguments:
+#   - numbers (list[int]): a list of integers
+#
+# Returns: int, how many numbers in the list are greater than 10.
+#
+# Examples:
+#   - Input: [4, 12, 30, 7]  ->  Output: 2
+#   - Input: [1, 2, 3]       ->  Output: 0
+
+
+# BONUS QUESTIONS -------------------------------------------------------------
+
+
+# -----------------------------------------------------------------------------
 # Exercise 1: Sum of Evens
 # Concepts: lists, for loops, conditionals
 #
@@ -12,7 +189,6 @@
 # Examples:
 #   - Input: [1, 2, 3, 4, 5, 6]  ->  Output: 12
 #   - Input: [7, 9, 11]          ->  Output: 0
-# -----------------------------------------------------------------------------
  
  
  
@@ -31,31 +207,11 @@
 # Examples:
 #   - Input: ["apple", "banana", "apple"]  ->  Output: {"apple": 2, "banana": 1}
 #   - Input: []                            ->  Output: {}
-# -----------------------------------------------------------------------------
  
  
  
 # -----------------------------------------------------------------------------
-# Exercise 3: Count the Digits
-# Concepts: while loops, integer arithmetic
-#
-# Write a function `count_digits` that counts the digits in a non-negative
-# integer USING A WHILE LOOP (do not convert the number to a string).
-#
-# Arguments:
-#   - number (int): a non-negative integer
-#
-# Returns: int, the number of digits.
-#
-# Examples:
-#   - Input: 12345  ->  Output: 5
-#   - Input: 0      ->  Output: 1
-# -----------------------------------------------------------------------------
- 
- 
- 
-# -----------------------------------------------------------------------------
-# Exercise 4: FizzBuzz List
+# Exercise 3: FizzBuzz List
 # Concepts: for loops, conditional logic, lists
 #
 # Write a function `fizzbuzz_list` that builds a list for the numbers 1
@@ -73,34 +229,10 @@
 # Examples:
 #   - Input: 5  ->  Output: ["1", "2", "Fizz", "4", "Buzz"]
 #   - Input: 3  ->  Output: ["1", "2", "Fizz"]
-# -----------------------------------------------------------------------------
- 
- 
- 
-# -----------------------------------------------------------------------------
-# Exercise 5: Count the Types
-# Concepts: data types, dictionaries, for loops
-#
-# Write a function `count_types` that counts how many values of each data type
-# appear in a list. Use the type's name (e.g. type(value).__name__) as the
-# dictionary key.
-#
-# Arguments:
-#   - values (list): a list containing values of mixed types
-#
-# Returns: dict[str, int], mapping each type name to how many times it appears.
-#
-# Examples:
-#   - Input: [1, "a", 2.5, True, "b"]
-#       ->  Output: {"int": 1, "str": 2, "float": 1, "bool": 1}
-#   - Input: [3, 4, 5]
-#       ->  Output: {"int": 3}
-# -----------------------------------------------------------------------------
- 
  
  
 # -----------------------------------------------------------------------------
-# Exercise 6: Budget Shopper
+# Exercise 4: Budget Shopper
 # Concepts: while loops, lists, conditional logic
 #
 # Write a function `items_within_budget` that goes through item prices IN ORDER,
@@ -116,12 +248,11 @@
 # Examples:
 #   - Input: [3.5, 2.0, 4.0, 1.5], 6.0  ->  Output: 2
 #   - Input: [5.0, 5.0], 4.0            ->  Output: 0
-# -----------------------------------------------------------------------------
  
  
  
 # -----------------------------------------------------------------------------
-# Exercise 7: Letter Grades
+# Exercise 5: Letter Grades
 # Concepts: dictionaries, for loops, conditional logic
 #
 # Write a function `grade_report` that converts numeric scores to letter grades
@@ -142,12 +273,11 @@
 #       ->  Output: {"Ana": "A", "Ben": "C", "Cy": "F"}
 #   - Input: {"Dee": 80, "Eli": 89}
 #       ->  Output: {"Dee": "B", "Eli": "B"}
-# -----------------------------------------------------------------------------
  
  
  
 # -----------------------------------------------------------------------------
-# Exercise 8: Second Largest
+# Exercise 6: Second Largest
 # Concepts: lists, for loops, conditional logic
 #
 # Write a function `second_largest` that finds the second largest DISTINCT
@@ -161,12 +291,11 @@
 # Examples:
 #   - Input: [4, 9, 2, 7]  ->  Output: 7
 #   - Input: [5, 5]        ->  Output: None
-# -----------------------------------------------------------------------------
  
  
  
 # -----------------------------------------------------------------------------
-# Exercise 9: Collatz Steps
+# Exercise 7: Collatz Steps
 # Concepts: while loops, conditional logic, integer arithmetic
 #
 # Write a function `collatz_steps` that counts how many steps it takes to reach
@@ -183,12 +312,11 @@
 #   - Input: 6  ->  Output: 8
 #       (6 -> 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1)
 #   - Input: 1  ->  Output: 0
-# -----------------------------------------------------------------------------
  
  
  
 # -----------------------------------------------------------------------------
-# Exercise 10: Invert a Dictionary
+# Exercise 8: Invert a Dictionary
 # Concepts: dictionaries, for loops
 #
 # Write a function `invert_dictionary` that swaps keys and values. You may
@@ -210,7 +338,7 @@
  
  
 # -----------------------------------------------------------------------------
-# Exercise 11: Honor Roll
+# Exercise 9: Honor Roll
 # Concepts: lists of dictionaries, for loops, conditional logic
 #
 # Write a function `honor_roll` that returns the names of students whose GPA is
@@ -233,7 +361,7 @@
  
  
 # -----------------------------------------------------------------------------
-# Exercise 12: Palindrome Checker
+# Exercise 10: Palindrome Checker
 # Concepts: strings, data types, conditional logic, loops
 #
 # Write a function `is_palindrome` that checks whether a phrase reads the same
