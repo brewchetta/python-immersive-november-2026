@@ -64,7 +64,7 @@ def what_is_the_count():
         return "It's one digit"
 
 
-# INPUT FUNCTION
+# INPUT FUNCTION ##############################################################
 # input function pauses python execution to get type user input
 
 def get_favorite_candy():
@@ -76,7 +76,7 @@ def get_favorite_candy():
         print("You didn't type anything, we need your favorite candy")
 
 
-# DICTIONARIES
+# DICTIONARIES ###############################################################
 # js objects
 
 # data structures - a set format for dealing with values and sometimes keys
@@ -142,3 +142,86 @@ country["capital"]["capitol"]["representatives"] = 436
 
 # you can still add new key / value pairs as well
 country["capital"]["capitol"]["color"] = "light grey"
+
+
+# LISTS ##########################################################################
+
+# data structure - hold data
+
+# keys are less relevant - order
+
+sandwich_instructions = [
+    "First you get the bread",                  # index 0
+    "Toast the bread I guess",                  # index 1
+    "Put stuff in the bread",                   # index 2
+    "Count the calories",                       # index 3
+    "Eat the bread and the stuff in the bread"  # index 4
+]
+
+# index - the value's place in the list
+
+sandwich_instructions[0] # "First you get the bread"
+sandwich_instructions[2] # "Put stuff in the bread"
+sandwich_instructions[4] # "Eat the bread and the stuff in the bread"
+# sandwich_instructions[15] # this will give an error bc it goes past the end of the list
+
+# counting from the back of a list
+sandwich_instructions[-1] # "Eat the bread and the stuff in the bread"
+
+# set items in the list using an index
+sandwich_instructions[0] = "Think about sandwiches"
+
+# list methods - a function attached to a list which manipulates it
+
+sandwich_instructions.append("Clean up") # adds to the end of the list
+
+sandwich_instructions.pop() # by default removes from the end of the list
+
+sandwich_instructions.pop(0) # removes from the list at that index
+
+sandwich_instructions.reverse() # reverses the list
+
+sandwich_instructions.insert(0, "Buy bread") # adds a new item at index 0 (the front of the list)
+
+# destructive vs non-destructive
+# destructive means we directly change the original list
+# non-destructive means we don't change the original list
+
+sandwich_instructions[0:2] # gets items with indexes 0 & 1
+sandwich_instructions[1:3] # gets items with indexes 1 & 2
+sandwich_instructions[:3] # gets items up to but not including index 3
+sandwich_instructions[2:] # gets items starting with index 2 and later
+
+# nested lists
+
+drinks = [
+    {
+        "name": "Water",
+        "alcohol_content": 0,
+        "ingredients": [ "hydrogen", "oxygen", "trace minerals", "fluoride" ]
+    },
+    {
+        "name": "Bourbon On The Rocks",
+        "alcohol_content": 40,
+        "ingredients": [ "Noble Oak Bourbon", "rocks" ]
+    },
+    {
+        "name": "Apple Juice",
+        "alcohol_content": 0,
+        "ingredients": [ "apples", "sugar", "citric acid" ]
+    }
+]
+
+# a list nested in a dictionary nested in a list
+
+drinks[0]["ingredients"][0] # "hydrogen"
+
+# matrix
+
+# two dimensional matrix - list of lists
+
+simple_matrix = [
+    ["X","O","X"],
+    ["X","X","O"],
+    ["O","X","O"]
+]
