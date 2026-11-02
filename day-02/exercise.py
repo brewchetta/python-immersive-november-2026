@@ -13,6 +13,11 @@
 #   - Input: ["red", "green", "blue"]  ->  Output: "red"
 #   - Input: ["dog"]                   ->  Output: "dog"
 
+# ["dog", "cat", "polar bear"]
+
+def first_item(items):
+    return items[0]
+
 
 # -----------------------------------------------------------------------------
 # Exercise 2: Add to the List

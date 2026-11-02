@@ -216,8 +216,6 @@ drinks = [
 
 drinks[0]["ingredients"][0] # "hydrogen"
 
-# matrix
-
 # two dimensional matrix - list of lists
 
 simple_matrix = [
@@ -225,3 +223,136 @@ simple_matrix = [
     ["X","X","O"],
     ["O","X","O"]
 ]
+
+
+# LOOPS ################################################################################
+
+# why use loops?
+# we often want to go through each item in a list and do something with it
+
+
+# while loops
+
+def print_all_items():
+    my_list = [10,20,30,40,50]
+    new_list = []
+
+    # this index var is the currently selected index
+    index = 0
+
+    # while the index doesn't go past the end of the list....
+    while index < len( my_list ):
+        # do stuff over and over again
+        current_item = my_list[ index ]
+        new_list.append(current_item * 3)
+        index += 1
+
+    return new_list
+
+# index = 0; print 10
+# index += 1
+# index = 1; print 20
+# index += 1
+# index = 2; print 30
+# index += 1
+# ...
+# index = 5; end loop because index is not less than list length
+
+my_list = [9,8,7,6,5,4]
+
+# num is the stand in variable name for each item
+for num in my_list:
+    print( num )
+
+
+counter = 0
+
+# you can use _ if you don't care about the name for each item
+for _ in my_list:
+    counter += 1
+
+
+def find_the_geese():
+    birds = ["duck","duck","goose","duck","duck","goose","duck","duck"]
+
+    num_geese = 0
+
+    for current_bird in birds:
+        if current_bird == "goose":
+            num_geese += 1
+
+    return num_geese
+
+
+def ring_up():
+    prices = [10.99, 12, 13.68, 14.40]
+
+    subtotal = 0
+
+    for price in prices:
+        subtotal += price
+
+    # subtotal = sum(prices)
+
+    subtotal *= 1.0875
+    return round(subtotal, 2)
+
+
+# the sum divided by the total number of items
+def get_the_average( list_of_numbers ):
+
+    # in case of an empty list....
+    if len( list_of_numbers ) < 1:
+        return None
+
+    # sum(list_of_numbers)
+    total = 0
+
+    for index in list_of_numbers:
+        total += index
+
+    return total / len( list_of_numbers )
+
+
+# List Comprehension
+
+def multiply_by_three( some_list ):
+    # return a new list where each item is multiplied by 3
+    return [ num * 3 for num in some_list ]
+
+def even_or_odd( list_of_numbers ):
+    return [ ("even" if num % 2 == 0 else "odd") for num in list_of_numbers ]
+
+def evens( list_of_numbers ):
+    # return the unchanged num if even
+    return [ num for num in list_of_numbers if num % 2 == 0 ]
+
+# List Comprehension Exercises
+
+# return a new list using list comprehension to filter and only include words that contain 'g'
+def words_with_g( list_of_words ):
+    return [ word for word in list_of_words if 'g' in word.lower() ]
+
+# return a new list using list comprehension of all prices rounded to the second decimal place
+# [20.9999999, 15.3789, 22.8765] ---> [20.99, 15.38, 22.88]
+def round_prices( list_of_prices ):
+    price_list = [ round(n, 2) for n in list_of_prices ]
+    return price_list
+
+
+# SETS & TUPLE #########################################################################
+
+# a set does not allow for duplicate data
+
+my_set = { 1, 2, 3, 4, 4, 4, 4 }
+# { 1, 2, 3, 4 }
+
+# a tuple is like a list except it cannot be changed after you declare it
+# (you can't add or remove items or change them)
+
+my_tuple = (1,2,3,4,5)
+
+my_tuple[0] # 1
+
+# there is no append or pop
+# cannot do: my_tuple[0] = 20
