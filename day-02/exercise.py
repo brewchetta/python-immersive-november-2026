@@ -1,383 +1,226 @@
-# -----------------------------------------------------------------------------
-# Exercise 1: First Item
-# Concepts: lists (indexing)
-#
-# Write a function `first_item` that returns the first item in a list.
-#
-# Arguments:
-#   - items (list[str]): a list containing at least one string
-#
-# Returns: str, the first item in the list.
-#
-# Examples:
-#   - Input: ["red", "green", "blue"]  ->  Output: "red"
-#   - Input: ["dog"]                   ->  Output: "dog"
-
-# ["dog", "cat", "polar bear"]
-
+# =============================================================================
+# PYTHON BEGINNER EXERCISES
+# =============================================================================
+# These are your very first exercises with lists, dictionaries, and loops.
+# Each function should RETURN its result (not print it).
+# Replace `pass` with your own code.
+# =============================================================================
+ 
+ 
+# 1. Build the function `first_item()` which accepts a single argument `items` (a list of strings)
+#   The function returns the first item in the list
+#   You may assume the list always has at least one item
+# Example: first_item(["red", "green", "blue"]) --> "red"
+# Example: first_item(["dog"]) --> "dog"
+ 
 def first_item(items):
-    return items[0]
-
-
-# -----------------------------------------------------------------------------
-# Exercise 2: Add to the List
-# Concepts: lists (adding items)
-#
-# Write a function `add_item` that adds a new item to the end of a list and
-# returns the updated list.
-#
-# Arguments:
-#   - items (list[str]): a list of strings
-#   - new_item (str): the string to add to the end of the list
-#
-# Returns: list[str], the list with the new item added at the end.
-#
-# Examples:
-#   - Input: ["apple", "banana"], "cherry"  ->  Output: ["apple", "banana", "cherry"]
-#   - Input: [], "milk"                     ->  Output: ["milk"]
-
-
-# -----------------------------------------------------------------------------
-# Exercise 3: Look Up an Age
-# Concepts: dictionaries (looking up a value by key)
-#
-# Write a function `get_age` that returns the age stored for a given name in
-# a dictionary. You may assume the name is always in the dictionary.
-#
-# Arguments:
-#   - ages (dict[str, int]): maps people's names to their ages
-#   - name (str): the name to look up
-#
-# Returns: int, the age belonging to that name.
-#
-# Examples:
-#   - Input: {"Sam": 12, "Priya": 14}, "Priya"  ->  Output: 14
-#   - Input: {"Leo": 9}, "Leo"                  ->  Output: 9
-
-
-# -----------------------------------------------------------------------------
-# Exercise 4: Add a Pet
-# Concepts: dictionaries (adding a key and value)
-#
-# Write a function `add_pet` that adds a new person and their pet to a
-# dictionary and returns the updated dictionary.
-#
-# Arguments:
-#   - pets (dict[str, str]): maps owners' names to the type of pet they own
-#   - owner (str): the name of the new owner
-#   - animal (str): the type of pet the new owner has
-#
-# Returns: dict[str, str], the dictionary with the new owner and pet added.
-#
-# Examples:
-#   - Input: {"Ana": "cat"}, "Ben", "dog"  ->  Output: {"Ana": "cat", "Ben": "dog"}
-#   - Input: {}, "Cy", "fish"              ->  Output: {"Cy": "fish"}
-
-
-# -----------------------------------------------------------------------------
-# Exercise 5: Add Up the Numbers
-# Concepts: for loops, lists
-#
-# Write a function `total` that uses a for loop to add up every number in a
-# list.
-#
-# Arguments:
-#   - numbers (list[int]): a list of integers
-#
-# Returns: int, the sum of all the numbers (0 if the list is empty).
-#
-# Examples:
-#   - Input: [1, 2, 3, 4]  ->  Output: 10
-#   - Input: []            ->  Output: 0
-
-
-# -----------------------------------------------------------------------------
-# Exercise 6: Double Each Number
-# Concepts: for loops, lists
-#
-# Write a function `double_all` that uses a for loop to build a new list where
-# every number from the original list has been multiplied by 2.
-#
-# Arguments:
-#   - numbers (list[int]): a list of integers
-#
-# Returns: list[int], a new list with each number doubled.
-#
-# Examples:
-#   - Input: [1, 2, 3]  ->  Output: [2, 4, 6]
-#   - Input: [5]        ->  Output: [10]
-
-
-# -----------------------------------------------------------------------------
-# Exercise 7: Countdown
-# Concepts: while loops, lists
-#
-# Write a function `countdown` that uses a while loop to build a list that
-# counts down from a starting number to 1.
-#
-# Arguments:
-#   - start (int): a positive integer to start counting down from
-#
-# Returns: list[int], the numbers from start down to 1.
-#
-# Examples:
-#   - Input: 3  ->  Output: [3, 2, 1]
-#   - Input: 1  ->  Output: [1]
-
-
-# -----------------------------------------------------------------------------
-# Exercise 8: Positive, Negative, or Zero
-# Concepts: conditional logic (if / elif / else)
-#
-# Write a function `describe_number` that decides whether a number is
-# positive, negative, or zero.
-#
-# Arguments:
-#   - number (int): any integer
-#
-# Returns: str, either "positive", "negative", or "zero".
-#
-# Examples:
-#   - Input: 8   ->  Output: "positive"
-#   - Input: -3  ->  Output: "negative"
-
-
-# -----------------------------------------------------------------------------
-# Exercise 9: Add Two Numbers from Text
-# Concepts: data types (converting a string to an integer)
-#
-# Write a function `add_text_numbers` that takes two numbers written as strings,
-# converts them to integers, and returns their sum.
-#
-# Arguments:
-#   - first (str): a whole number written as text, such as "5"
-#   - second (str): a whole number written as text, such as "7"
-#
-# Returns: int, the sum of the two numbers.
-#
-# Examples:
-#   - Input: "5", "7"    ->  Output: 12
-#   - Input: "10", "20"  ->  Output: 30
-
-
-# -----------------------------------------------------------------------------
-# Exercise 10: Count the Big Numbers
-# Concepts: for loops, lists, conditional logic
-#
-# Write a function `count_big` that uses a for loop to count how many numbers
-# in a list are greater than 10.
-#
-# Arguments:
-#   - numbers (list[int]): a list of integers
-#
-# Returns: int, how many numbers in the list are greater than 10.
-#
-# Examples:
-#   - Input: [4, 12, 30, 7]  ->  Output: 2
-#   - Input: [1, 2, 3]       ->  Output: 0
+    pass
+ 
+ 
+# 2. Build the function `add_item()` which accepts two arguments: `items` (a list of strings) and `new_item` (a string)
+#   The function adds `new_item` to the end of the list and returns the updated list
+# Example: add_item(["apple", "banana"], "cherry") --> ["apple", "banana", "cherry"]
+# Example: add_item([], "milk") --> ["milk"]
+ 
+def add_item(items, new_item):
+    pass
+ 
+ 
+# 3. Build the function `get_age()` which accepts two arguments: `ages` (a dictionary mapping names (str) to ages (int)) and `name` (a string)
+#   The function returns the age stored in the dictionary for `name`
+#   You may assume `name` is always in the dictionary
+# Example: get_age({"Sam": 12, "Priya": 14}, "Priya") --> 14
+# Example: get_age({"Leo": 9}, "Leo") --> 9
+ 
+def get_age(ages, name):
+    pass
+ 
+ 
+# 4. Build the function `add_pet()` which accepts three arguments: `pets` (a dictionary mapping owner names (str) to pet types (str)), `owner` (a string) and `animal` (a string)
+#   The function adds `owner` to the dictionary with `animal` as their value, and returns the updated dictionary
+# Example: add_pet({"Ana": "cat"}, "Ben", "dog") --> {"Ana": "cat", "Ben": "dog"}
+# Example: add_pet({}, "Cy", "fish") --> {"Cy": "fish"}
+ 
+def add_pet(pets, owner, animal):
+    pass
+ 
+ 
+# 5. Build the function `total()` which accepts a single argument `numbers` (a list of integers)
+#   The function uses a for loop to add up every number in the list and returns the sum
+#   If the list is empty, return 0
+# Example: total([1, 2, 3, 4]) --> 10
+# Example: total([]) --> 0
+ 
+def total(numbers):
+    pass
+ 
+ 
+# 6. Build the function `double_all()` which accepts a single argument `numbers` (a list of integers)
+#   The function uses a for loop to build a new list where every number has been multiplied by 2, and returns the new list
+# Example: double_all([1, 2, 3]) --> [2, 4, 6]
+# Example: double_all([5]) --> [10]
+ 
+def double_all(numbers):
+    pass
+ 
+ 
+# 7. Build the function `countdown()` which accepts a single argument `start` (a positive integer)
+#   The function uses a while loop to build a list that counts down from `start` to 1, and returns the list
+# Example: countdown(3) --> [3, 2, 1]
+# Example: countdown(1) --> [1]
+ 
+def countdown(start):
+    pass
+ 
+ 
+# 8. Build the function `describe_number()` which accepts a single argument `number` (an integer)
+#   The function returns "positive" if `number` is greater than 0 and "negative" if it is less than 0
+#   If `number` is 0, return "zero"
+# Example: describe_number(8) --> "positive"
+# Example: describe_number(-3) --> "negative"
+ 
+def describe_number(number):
+    pass
+ 
+ 
+# 9. Build the function `add_text_numbers()` which accepts two arguments: `first` (a string) and `second` (a string)
+#   Both strings are whole numbers written as text, such as "5"
+#   The function converts both to integers and returns their sum as an integer
+# Example: add_text_numbers("5", "7") --> 12
+# Example: add_text_numbers("10", "20") --> 30
+ 
+def add_text_numbers(first, second):
+    pass
+ 
+ 
+# 10. Build the function `count_big()` which accepts a single argument `numbers` (a list of integers)
+#   The function uses a for loop to count how many numbers in the list are greater than 10, and returns that count
+# Example: count_big([4, 12, 30, 7]) --> 2
+# Example: count_big([1, 2, 3]) --> 0
+ 
+def count_big(numbers):
+    pass
 
 
 # BONUS QUESTIONS -------------------------------------------------------------
 
 
-# -----------------------------------------------------------------------------
-# Exercise 1: Sum of Evens
-# Concepts: lists, for loops, conditionals
-#
-# Write a function `sum_of_evens` that adds up only the even numbers in a list.
-#
-# Arguments:
-#   - numbers (list[int]): a list of integers
-#
-# Returns: int, the sum of all even numbers (0 if there are none).
-#
-# Examples:
-#   - Input: [1, 2, 3, 4, 5, 6]  ->  Output: 12
-#   - Input: [7, 9, 11]          ->  Output: 0
+# B1. Build the function `sum_of_evens()` which accepts a single argument `numbers` (a list of integers)
+#   The function returns the sum of only the even numbers in the list
+#   If there are no even numbers, return 0
+# Example: sum_of_evens([1, 2, 3, 4, 5, 6]) --> 12
+# Example: sum_of_evens([7, 9, 11]) --> 0
+ 
+def sum_of_evens(numbers):
+    pass
  
  
+# B2. Build the function `word_frequency()` which accepts a single argument `words` (a list of strings)
+#   The function returns a dictionary mapping each word to the number of times it appears in the list
+# Example: word_frequency(["apple", "banana", "apple"]) --> {"apple": 2, "banana": 1}
+# Example: word_frequency([]) --> {}
  
-# -----------------------------------------------------------------------------
-# Exercise 2: Word Frequency
-# Concepts: dictionaries, for loops
-#
-# Write a function `word_frequency` that counts how many times each word
-# appears in a list.
-#
-# Arguments:
-#   - words (list[str]): a list of words
-#
-# Returns: dict[str, int], mapping each word to its count.
-#
-# Examples:
-#   - Input: ["apple", "banana", "apple"]  ->  Output: {"apple": 2, "banana": 1}
-#   - Input: []                            ->  Output: {}
+def word_frequency(words):
+    pass
  
  
+# B3. Build the function `count_digits()` which accepts a single argument `number` (a non-negative integer)
+#   The function returns how many digits are in `number`
+#   You must use a while loop (do not convert the number to a string)
+# Example: count_digits(12345) --> 5
+# Example: count_digits(0) --> 1
  
-# -----------------------------------------------------------------------------
-# Exercise 3: FizzBuzz List
-# Concepts: for loops, conditional logic, lists
-#
-# Write a function `fizzbuzz_list` that builds a list for the numbers 1
-# through `n`. For each number:
-#   - Multiples of 3 become "Fizz"
-#   - Multiples of 5 become "Buzz"
-#   - Multiples of both become "FizzBuzz"
-#   - All other numbers become the number as a string
-#
-# Arguments:
-#   - n (int): a positive integer
-#
-# Returns: list[str], one entry per number from 1 to n.
-#
-# Examples:
-#   - Input: 5  ->  Output: ["1", "2", "Fizz", "4", "Buzz"]
-#   - Input: 3  ->  Output: ["1", "2", "Fizz"]
+def count_digits(number):
+    pass
  
  
-# -----------------------------------------------------------------------------
-# Exercise 4: Budget Shopper
-# Concepts: while loops, lists, conditional logic
-#
-# Write a function `items_within_budget` that goes through item prices IN ORDER,
-# buying each one as long as the running total stays within the budget. Stop at
-# the first item that would push the total over the budget. Use a while loop.
-#
-# Arguments:
-#   - prices (list[float]): item prices, in the order they are encountered
-#   - budget (float): the total amount available to spend
-#
-# Returns: int, the number of items purchased.
-#
-# Examples:
-#   - Input: [3.5, 2.0, 4.0, 1.5], 6.0  ->  Output: 2
-#   - Input: [5.0, 5.0], 4.0            ->  Output: 0
+# B4. Build the function `fizzbuzz_list()` which accepts a single argument `n` (a positive integer)
+#   The function returns a list of strings, one for each number from 1 through `n`
+#   Multiples of 3 become "Fizz", multiples of 5 become "Buzz", and multiples of both become "FizzBuzz"
+#   All other numbers become the number as a string
+# Example: fizzbuzz_list(5) --> ["1", "2", "Fizz", "4", "Buzz"]
+# Example: fizzbuzz_list(3) --> ["1", "2", "Fizz"]
+ 
+def fizzbuzz_list(n):
+    pass
  
  
+# B5. Build the function `count_types()` which accepts a single argument `values` (a list containing values of mixed types)
+#   The function returns a dictionary mapping each type's name to how many values of that type are in the list
+#   Hint: `type(value).__name__` gives the name of a value's type as a string
+# Example: count_types([1, "a", 2.5, True, "b"]) --> {"int": 1, "str": 2, "float": 1, "bool": 1}
+# Example: count_types([3, 4, 5]) --> {"int": 3}
  
-# -----------------------------------------------------------------------------
-# Exercise 5: Letter Grades
-# Concepts: dictionaries, for loops, conditional logic
-#
-# Write a function `grade_report` that converts numeric scores to letter grades
-# using this scale:
-#   - 90+   = "A"
-#   - 80-89 = "B"
-#   - 70-79 = "C"
-#   - 60-69 = "D"
-#   - below 60 = "F"
-#
-# Arguments:
-#   - scores (dict[str, int]): maps student names to scores
-#
-# Returns: dict[str, str], mapping each student name to their letter grade.
-#
-# Examples:
-#   - Input: {"Ana": 95, "Ben": 72, "Cy": 58}
-#       ->  Output: {"Ana": "A", "Ben": "C", "Cy": "F"}
-#   - Input: {"Dee": 80, "Eli": 89}
-#       ->  Output: {"Dee": "B", "Eli": "B"}
+def count_types(values):
+    pass
  
  
+# B6. Build the function `items_within_budget()` which accepts two arguments: `prices` (a list of floats) and `budget` (a float)
+#   The function goes through `prices` in order, buying each item as long as the running total stays within `budget`
+#   Stop at the first item that would push the total over the budget
+#   The function returns the number of items purchased
+#   You must use a while loop
+# Example: items_within_budget([3.5, 2.0, 4.0, 1.5], 6.0) --> 2
+# Example: items_within_budget([5.0, 5.0], 4.0) --> 0
  
-# -----------------------------------------------------------------------------
-# Exercise 6: Second Largest
-# Concepts: lists, for loops, conditional logic
-#
-# Write a function `second_largest` that finds the second largest DISTINCT
-# value in a list. If the list has fewer than two distinct values, return None.
-#
-# Arguments:
-#   - numbers (list[int]): a list of integers
-#
-# Returns: int or None, the second largest distinct value.
-#
-# Examples:
-#   - Input: [4, 9, 2, 7]  ->  Output: 7
-#   - Input: [5, 5]        ->  Output: None
+def items_within_budget(prices, budget):
+    pass
  
  
+# B7. Build the function `grade_report()` which accepts a single argument `scores` (a dictionary mapping student names (str) to scores (int))
+#   The function returns a dictionary mapping each student name to a letter grade
+#   90 and above is "A", 80-89 is "B", 70-79 is "C", 60-69 is "D", and below 60 is "F"
+# Example: grade_report({"Ana": 95, "Ben": 72, "Cy": 58}) --> {"Ana": "A", "Ben": "C", "Cy": "F"}
+# Example: grade_report({"Dee": 80, "Eli": 89}) --> {"Dee": "B", "Eli": "B"}
  
-# -----------------------------------------------------------------------------
-# Exercise 7: Collatz Steps
-# Concepts: while loops, conditional logic, integer arithmetic
-#
-# Write a function `collatz_steps` that counts how many steps it takes to reach
-# 1 using this process, repeated until the number equals 1:
-#   - If the number is even, divide it by 2
-#   - If the number is odd, multiply it by 3 and add 1
-#
-# Arguments:
-#   - n (int): a positive integer
-#
-# Returns: int, the number of steps needed to reach 1.
-#
-# Examples:
-#   - Input: 6  ->  Output: 8
-#       (6 -> 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1)
-#   - Input: 1  ->  Output: 0
+def grade_report(scores):
+    pass
  
  
+# B8. Build the function `second_largest()` which accepts a single argument `numbers` (a list of integers)
+#   The function returns the second largest DISTINCT value in the list
+#   If the list has fewer than two distinct values, return None
+# Example: second_largest([4, 9, 2, 7]) --> 7
+# Example: second_largest([5, 5]) --> None
  
-# -----------------------------------------------------------------------------
-# Exercise 8: Invert a Dictionary
-# Concepts: dictionaries, for loops
-#
-# Write a function `invert_dictionary` that swaps keys and values. You may
-# assume all values are unique.
-#
-# Arguments:
-#   - data (dict[str, int]): a dictionary with unique integer values
-#
-# Returns: dict[int, str], where each original value is now a key and each
-# original key is now a value.
-#
-# Examples:
-#   - Input: {"x": 10, "y": 20, "z": 30}
-#       ->  Output: {10: "x", 20: "y", 30: "z"}
-#   - Input: {}
-#       ->  Output: {}
-# -----------------------------------------------------------------------------
+def second_largest(numbers):
+    pass
  
  
+# B9. Build the function `collatz_steps()` which accepts a single argument `n` (a positive integer)
+#   Repeat the following until `n` equals 1: if `n` is even, divide it by 2; if `n` is odd, multiply it by 3 and add 1
+#   The function returns the number of steps it took to reach 1
+# Example: collatz_steps(6) --> 8   (6 -> 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1)
+# Example: collatz_steps(1) --> 0
  
-# -----------------------------------------------------------------------------
-# Exercise 9: Honor Roll
-# Concepts: lists of dictionaries, for loops, conditional logic
-#
-# Write a function `honor_roll` that returns the names of students whose GPA is
-# AT LEAST the minimum, in their original order.
-#
-# Arguments:
-#   - students (list[dict]): each dictionary has a "name" (str) and a
-#                            "gpa" (float)
-#   - min_gpa (float): the minimum GPA required
-#
-# Returns: list[str], the qualifying students' names.
-#
-# Examples:
-#   - Input: [{"name": "Ana", "gpa": 3.8}, {"name": "Ben", "gpa": 2.9}], 3.0
-#       ->  Output: ["Ana"]
-#   - Input: [{"name": "Cy", "gpa": 3.0}, {"name": "Dee", "gpa": 3.2}], 3.0
-#       ->  Output: ["Cy", "Dee"]
-# -----------------------------------------------------------------------------
+def collatz_steps(n):
+    pass
  
  
+# B10. Build the function `invert_dictionary()` which accepts a single argument `data` (a dictionary mapping strings to unique integers)
+#   The function returns a new dictionary where each original value is now a key and each original key is now a value
+# Example: invert_dictionary({"x": 10, "y": 20, "z": 30}) --> {10: "x", 20: "y", 30: "z"}
+# Example: invert_dictionary({}) --> {}
  
-# -----------------------------------------------------------------------------
-# Exercise 10: Palindrome Checker
-# Concepts: strings, data types, conditional logic, loops
-#
-# Write a function `is_palindrome` that checks whether a phrase reads the same
-# forwards and backwards, ignoring spaces and letter case.
-#
-# Arguments:
-#   - text (str): the phrase to check
-#
-# Returns: bool, True if it is a palindrome, otherwise False.
-#
-# Examples:
-#   - Input: "Never odd or even"  ->  Output: True
-#   - Input: "Python"             ->  Output: False
-# -----------------------------------------------------------------------------
+def invert_dictionary(data):
+    pass
+ 
+ 
+# B11. Build the function `honor_roll()` which accepts two arguments: `students` (a list of dictionaries) and `min_gpa` (a float)
+#   Each dictionary in `students` has a "name" key (a string) and a "gpa" key (a float)
+#   The function returns a list of the names of students whose GPA is at least `min_gpa`, in their original order
+# Example: honor_roll([{"name": "Ana", "gpa": 3.8}, {"name": "Ben", "gpa": 2.9}], 3.0) --> ["Ana"]
+# Example: honor_roll([{"name": "Cy", "gpa": 3.0}, {"name": "Dee", "gpa": 3.2}], 3.0) --> ["Cy", "Dee"]
+ 
+def honor_roll(students, min_gpa):
+    pass
+ 
+ 
+# B12. Build the function `is_palindrome()` which accepts a single argument `text` (a string)
+#   The function returns True if `text` reads the same forwards and backwards, ignoring spaces and letter case
+#   Otherwise, it returns False
+# Example: is_palindrome("Never odd or even") --> True
+# Example: is_palindrome("Python") --> False
+ 
+def is_palindrome(text):
+    pass
