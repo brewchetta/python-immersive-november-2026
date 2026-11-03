@@ -79,4 +79,118 @@ class Animal:
 
 
 class Schedule:
-    pass
+
+    # class variable
+    all_tasks = []
+    color = "blue"
+    completed = False
+
+    def __init__(self, day_of_week, time, task):
+        self.day_of_week = day_of_week
+        self.time = time
+        self.task = task
+        Schedule.all_tasks.append( self )
+
+    def __repr__(self):
+        return f"Schedule(day_of_week={self.day_of_week}, time={self.time}, task={self.task}, completed={self.completed})"
+
+    def complete_task(self):
+        self.completed = True
+
+    # a class method is attached to the class (Schedule) instead of an instance
+    @classmethod
+    def tasks_by_day(cls, day):
+        return [task for task in cls.all_tasks if task.day_of_week == day]
+
+    # we call class methods like so:
+    # Schedule.tasks_by_day("Tuesday")
+
+    @classmethod
+    def clear(cls):
+        cls.all_tasks.clear()
+
+    @classmethod
+    def add_task_everyday(cls, task, time):
+        days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        for d in days:
+            Schedule(task=task, time=time, day_of_week=d)
+
+soccer = Schedule("Tuesday", "6pm", task="soccer practice")
+Schedule("Monday", "3pm", "karate")
+Schedule("Tuesday", "9pm", "movie night")
+Schedule("Thursday", "12pm", "lunch with Bob")
+
+
+# INHERITANCE ####################################
+
+# superclass
+# subclasses can inherit the behavior of the superclass
+
+class Cat:
+
+    claws = True
+
+    def __init__(self, name, number_of_lives):
+        self.name = name
+        self.number_of_lives = number_of_lives
+
+    def __repr__(self):
+        return f"{self.__class__.__name__}(name={self.name}, number_of_lives={self.number_of_lives})"
+        # .__class__.__name__ gets the class name of the current instance instead of just the superclass name
+
+    def scratch(self):
+        return "Scritch scratch there goes all your nice furniture"
+
+    def use_night_vision(self):
+        return "This cat can see in the dark!"
+
+
+# mixins are just superclasses with a smaller subset of methods or behaviors
+class RoarMixin:
+    def roar(self):
+        return "rawr"
+
+# a subclass can inherit from multiple classes!
+
+
+# D.R.Y. - dont repeat yourself
+
+# Tiger inherits from Cat superclass
+class Tiger(Cat, RoarMixin):
+    
+    # defining a method in the subclass that has the same name as a superclass method means the subclass method gets priority
+    def scratch(self):
+        return "NOT JUST A SCRATCH --- WATCH OUT!"
+
+    def swim(self):
+        return "it's not doggy paddle it's tiger paddle"
+
+
+class Lion(Cat, RoarMixin):
+    
+    def __init__(self, name, number_of_lives, mane_size):
+        # run the Cat __init__
+        super().__init__(name, number_of_lives)
+        # and then add mane_size
+        self.mane_size = mane_size
+
+    def __repr__(self):
+        # use the super class repr and then add mane size to the end of the string
+        return super().__repr__()[:-1] + f", mane_size={self.mane_size})"
+        # [:-1] removes the trailing parentheses
+
+    def use_night_vision(self):
+        print("I see in the dark")
+        return super().use_night_vision()
+
+
+
+
+tony = Tiger(name="Tony", number_of_lives=10)
+mittens = Cat(name="Mittens", number_of_lives=9)
+
+cowardly = Lion(
+    name="Cowardly Lion", 
+    number_of_lives=1, 
+    mane_size="shoulder to mid back"
+)

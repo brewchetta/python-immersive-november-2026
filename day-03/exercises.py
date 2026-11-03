@@ -1,3 +1,5 @@
+# https://github.com/brewchetta/python-immersive-november-2026/blob/main/day-03/exercises.py
+
 """###EXERCISE: Human Class
 
 Create a new class `Human` which has required attributes `first_name:str`, `last_name:str`, `address:str`, `age:int`, and `is_hungry:bool`.
@@ -10,7 +12,7 @@ A `Human` instance has an `order_drinks()` method which either returns `"Party t
 
 A `Human` instance has an `eat()` method which sets their attribute `is_hungry` equal to `False`.
 
-A `Human` instance has a `workout()` method which sets their attributes `is_hungery` equal to `True`.
+A `Human` instance has a `workout()` method which sets their attributes `is_hungry` equal to `True`.
 
 A `Human` instance has a `win_lottery()` method which sets their attribute `address` equal to `"Disneyworld"`.
 
