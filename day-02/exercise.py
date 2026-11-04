@@ -60,8 +60,16 @@ def total(numbers):
 # Example: double_all([1, 2, 3]) --> [2, 4, 6]
 # Example: double_all([5]) --> [10]
  
+numbers = [1,2,3,4,5,0,-5]
+
 def double_all(numbers):
-    pass
+    new_list = []
+    for n in numbers:
+        doubled = n * 2
+        new_list.append(doubled)
+    return new_list
+    # alternative
+    return [ num * 2 for num in numbers ]
  
  
 # 7. Build the function `countdown()` which accepts a single argument `start` (a positive integer)
