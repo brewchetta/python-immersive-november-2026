@@ -69,7 +69,7 @@ def super_math(operator, initial_value, *args, **kargs):
     if kargs.get("round"):
         result = round(result)
     
-    return 
+    return result
     
 # args and kargs are conventions, you may instead do *stuff, **
 
@@ -148,3 +148,6 @@ def get_dad_joke():
     else:
         # otherwise alert the user to the bad status code
         return f"[{response.status_code}] Unable to tell that joke..."
+
+
+https://de1.api.radio-browser.info/json/stations/search?type=jazz

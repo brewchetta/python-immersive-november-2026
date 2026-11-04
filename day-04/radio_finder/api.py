@@ -5,7 +5,8 @@ import requests
 class APIConnector:
 
     url = "https://de1.api.radio-browser.info/json/stations/search?"
-    limit = 50
+    limit = 5
+    attempts = 0
 
     def __init__(self, station_type=None, countrycode=None):
         self.station_type = station_type
@@ -14,10 +15,11 @@ class APIConnector:
         self.connect()
 
     def connect(self):
+        self.attempts += 1
         search_params = [ f"limit={self.limit}" ]
 
         if self.station_type:
-            search_params.append(f"station_type={self.station_type}")
+            search_params.append(f"type={self.station_type}")
         if self.countrycode:
             search_params.append(f"countrycode={self.countrycode}")
 
@@ -33,8 +35,3 @@ class APIConnector:
         
     def retry(self):
         return self.connect()
-
-# name
-# country
-# lastchecktime
-# homepage
