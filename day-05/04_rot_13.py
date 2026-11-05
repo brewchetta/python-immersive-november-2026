@@ -46,5 +46,22 @@ def rot_13( string ):
 ---
 """
 
-def rot_n():
-    pass
+def rot_n( string, offset ):
+    # make sure the offset is less than 26 so we don't go out of range
+    offset = offset % 26
+    # start new string
+    new_string = ""
+    for l in string.lower():
+        # if not in alphabet
+        if ord(l) < 97 or ord(l) > 122:
+            new_string += l
+        # if front part of the alphabet (calculated by offset)
+        elif 97 <= ord(l) <= (122 - offset):
+            new_code = ord(l) + offset
+            new_string += chr(new_code)
+        # if back part of the alphabet (calculated by offset)
+        elif (123 - offset) <= ord(l) <= 122:
+            # wrap around is a subtraction of 26 - offset
+            new_code = ord(l) - (26 - offset)
+            new_string += chr(new_code)
+    return new_string
