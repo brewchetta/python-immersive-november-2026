@@ -13,5 +13,18 @@
 ---
 """
 
-def character_counter():
-    pass
+import re
+
+def character_counter( text ):
+    characters = {}
+
+    for letter in text.lower():
+      # BONUS: some special regex to only get alphabetical characters
+      if not re.match(r'^[a-z]$', letter):
+        pass
+      elif letter not in characters:
+        characters[letter] = 1
+      elif letter in characters:
+        characters[letter] += 1
+
+    return characters

@@ -5,6 +5,10 @@
 
 **INPUT:** `rot_13( "hello there" )`
 
+abcdefghijklmnopqrstuvwxyz
+       ^            ^
+    original       new
+
 **OUTPUT:** `"uryyb gurer"`
 
 **HINT:** There is a numerical way to "shift" a character X places in ASCII and Unicode. Additionally, if the letter goes past "z" you will need to figure out how to wrap back around from the beginning of the alphabet.
