@@ -1,9 +1,10 @@
+# WORK UNTIL 11:05 EST
 """
 ## **EXERCISE: Character Counter**
 
 **OBJECTIVE:** Given a string (e.g. `"hello world"`), we want to design a function/script that can count the frequency of unique characters in that string.
 
-**INPUT:** `"data"`, `"DATA"`, `"Data"`
+**INPUT:** `character_counter("data")`, `character_counter("DATA")`, `character_counter("Data")`
 
 **OUTPUT:**
   - `"d": 1`

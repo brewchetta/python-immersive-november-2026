@@ -3,7 +3,9 @@
 
 **OBJECTIVE:** Given a positive number, print each integer up to that number substituting "Fizz" for numbers divisible by 3, "Buzz" for numbers divisible by 5, and "Fizz Buzz" for numbers divisible by both.
 
-**INPUT:** `15`
+**NOTE:** You are not returning anything with this function, rather you are printing a sequence.
+
+**INPUT:** `fizz_buzz(15)`
 
 **OUTPUT:**
   - `1`

@@ -1,3 +1,5 @@
+# https://github.com/brewchetta/python-immersive-november-2026/blob/main/day-05/01_bill_calculator.py
+# WORK UNTIL 10:30am EST
 """
 ## **EXERCISE: Bill Calculator**
 
@@ -11,8 +13,14 @@ Let's imagine we're going out to eat at a restaurant; we just had a good meal an
 
 **OUTPUT:** `27.826625`
 
+**NOTE:** The tax rate and whether the tip is taxed is up to you!
+
 ---
 """
 
-def calculate_bill():
-    pass
+price_of_food = 20.99
+
+def calculate_bill(price_of_food, tip_rate=0.20, split=1):
+    tip_amount = price_of_food * tip_rate
+    tax_amount = price_of_food * 0.0875
+    return (price_of_food + tip_amount + tax_amount) / split
