@@ -13,12 +13,26 @@ abcdefghijklmnopqrstuvwxyz
 
 **HINT:** There is a numerical way to "shift" a character X places in ASCII and Unicode. Additionally, if the letter goes past "z" you will need to figure out how to wrap back around from the beginning of the alphabet.
 
+**NOTE:** You may choose to lowercase letters before converting them since capitalizations add extra work.
+
 ---
 """
 
-def rot_13():
-    pass
-
+def rot_13( string ):
+    new_string = ""
+    for l in string.lower():
+        # if front half of alphabet
+        if 97 <= ord(l) <= 109:
+            new_code = ord(l) + 13
+            new_string += chr(new_code)
+        # if back half of alphabet
+        elif 110 <= ord(l) <= 122:
+            new_code = ord(l) - 13
+            new_string += chr(new_code)
+        # if not in alphabet
+        else:
+            new_string += l
+    return new_string
 
 """
 ## **BONUS: The ROT-N Algorithm**
