@@ -8,7 +8,7 @@
 
 **INPUT**: `fibonacci_of(N=10)`
 
-**OUTPUT:** `55`
+**OUTPUT:** `34`
 
 ---
 """
