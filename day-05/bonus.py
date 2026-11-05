@@ -14,7 +14,6 @@ def sum_of_evens(numbers):
 #   The function goes through `prices` in order, buying each item as long as the running total stays within `budget`
 #   Stop at the first item that would push the total over the budget
 #   The function returns the number of items purchased
-#   You must use a while loop
 # Example: items_within_budget([3.5, 2.0, 4.0, 1.5], 6.0) --> 2
 # Example: items_within_budget([5.0, 5.0], 4.0) --> 0
  
